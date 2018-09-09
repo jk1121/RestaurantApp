@@ -3,20 +3,23 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppComponent } from './app.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatToolbarModule,MatListModule} from '@angular/material';
 import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 import 'hammerjs';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
+    MatListModule,
+    MatToolbarModule,
     BrowserAnimationsModule,
     BrowserModule,
     FlexLayoutModule,
-  MatToolbarModule,
     HttpModule,
     FormsModule
     
